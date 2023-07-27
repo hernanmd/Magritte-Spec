@@ -112,7 +112,7 @@ MASpDescriptionEditorPresenter >> editDescription: aDescription [
 	p := aDescription asMASpPresenterIn: self application.
 	p saveAction: [ closedAsSave := true ].
 		
-	p openModalWithSpec.
+	p openModal.
 
 	closedAsSave ifFalse: [ ^ self ].
 
@@ -194,7 +194,7 @@ MASpDescriptionEditorPresenter >> preview [
 	
 	anExample := self example.
 	p := anExample asMASpPresenterIn: self application.
-	p openModalWithSpec.
+	p openModal.
 	
 	report := self buildReport.
 	layout := self defaultLayout.
